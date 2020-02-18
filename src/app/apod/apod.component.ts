@@ -19,7 +19,9 @@ export class ApodComponent implements OnInit {
   }
 
   getApod(): void{
-    this.apodService.getApod().subscribe(
+    let date = new Date().toISOString().slice(0,10);
+
+    this.apodService.getApod(date).subscribe(
       (response:any)=>{
         this.apod = response;
       }
