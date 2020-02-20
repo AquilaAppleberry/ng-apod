@@ -5,7 +5,8 @@ import { ApodComponent } from './apod/apod.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/apod', pathMatch: 'full'},
-  { path: 'apod', component: ApodComponent }
+  { path: 'apod', component: ApodComponent },
+  { path: 'apod/:date', component: ApodComponent }
 ];
 
 @NgModule({
