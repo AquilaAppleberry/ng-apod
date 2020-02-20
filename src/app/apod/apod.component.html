@@ -4,6 +4,8 @@
 
   <img [src]="apod.url" [alt]="apod.title">
 
+  <iframe *ngIf="apod.media_type==='video'" [src]="apod.url | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+
   <div>
     <span *ngIf="apod.copyright">&copy; {{ apod.copyright }} </span>
     {{ apod.date }}
